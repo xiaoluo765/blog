@@ -19,4 +19,12 @@
 
 // ];
 
+// 前台首页
 Route::get('/','index/index/index');
+// 后台首页
+Route::get('admin/index','admin/IndexController/index');
+// 后台欢迎页
+Route::get('admin/welcome','admin/IndexController/welcome');
+
+// 后台用户列表页
+Route::get('admin/admin/index','admin/AdminController/index');
