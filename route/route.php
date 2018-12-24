@@ -20,11 +20,15 @@
 // ];
 
 // 前台首页
-Route::get('/','index/index/index');
+Route::get('/', 'index/index/index');
 // 后台首页
-Route::get('admin/index','admin/IndexController/index');
-// 后台欢迎页
-Route::get('admin/welcome','admin/IndexController/welcome');
+Route::get('admin/index', 'admin/IndexController/index');
 
-// 后台用户列表页
-Route::get('admin/admin/index','admin/AdminController/index');
+// 后台管理员列表页
+Route::get('admin/admin/index', 'admin/AdminController/index');
+// 后台管理员添加
+Route::get('admin/admin/add', 'admin/AdminController/add');
+// 后台管理员添加处理
+Route::post('admin/admin/doadd', 'admin/AdminController/doadd');
+// 后台管理员修改
+Route::get('admin/admin/edit', 'admin/AdminController/edit');

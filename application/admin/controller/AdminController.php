@@ -15,8 +15,49 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $data = Db::name('fa_admin')->select();
+        $data = Db::name('admin')->select();
         return view('admin/index', ['data' => $data]);
+    }
+
+    /**
+     * 管理员添加
+     */
+    public function add()
+    {
+        return view('admin/add');
+    }
+
+    /**
+     * 管理员添加处理
+     */
+    public function doadd()
+    {
+        // var_dump($_POST);
+        $data['username'] = $_POST['username'];
+        $data['nickname'] = $_POST['nickname'];
+        // $data['phone'] = $_POST['phone'];
+        // $data['email'] = $_POST['email'];
+        // $data['password'] = $_POST['pass'];
+        $res = Db::name('admin')->insert($data);  
+        // if($res !== false){
+        //     return view('admin/add');
+        //     // $this->success('添加成功', '/admin/admin/add');
+        // }else{
+        //     $this->error('添加失败', [], 2);
+        // }
+        if ($res !== false) {
+           $date=[
+                  'status'=>0,
+                  'msg'=>'成功'
+                 ];
+        }else{
+           $date=[
+                  'status'=>1,
+                  'msg'=>'失败'
+                 ];
+         }
+         return json($date);
+
     }
 
     /**

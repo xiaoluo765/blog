@@ -1,137 +1,85 @@
-<div class="layui-side layui-bg-black x-side">
-    <div class="layui-side-scroll">
-        <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="side">
-            <li class="layui-nav-item">
-                <a class="javascript:;" href="javascript:;">
-                    <i class="layui-icon" style="top: 3px;">&#xe642;</i><cite>文章管理</cite>
-                </a>
-                <dl class="layui-nav-child">
-                    <dd class="">
-                        <dd class="">
-                            <a href="javascript:;" _href="./welcome.html">
-                                <cite>文章列表（待开发）</cite>
-                            </a>
-                        </dd>
-                    </dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item">
-                <a class="javascript:;" href="javascript:;">
-                    <i class="layui-icon" style="top: 3px;">&#xe630;</i><cite>分类管理</cite>
-                </a>
-                <dl class="layui-nav-child">
-                    <dd class="">
-                        <a href="javascript:;" _href="./category.html">
-                            <cite>分类列表</cite>
-                        </a>
-                    </dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item">
-                <a class="javascript:;" href="javascript:;">
-                    <i class="layui-icon" style="top: 3px;">&#xe612;</i><cite>会员管理</cite>
-                </a>
-                <dl class="layui-nav-child">
-                    <dd class="">
-                        <a _href="/admin/users/index" _href="member-list.html">
-                            <cite>会员列表</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./member-del.html">
-                            <cite>添加会员</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./member-level.html">
-                            <cite>等级管理</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./member-kiss.html">
-                            <cite>积分管理</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./member-view.html">
-                            <cite>浏览记录</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./member-view.html">
-                            <cite>分享记录</cite>
-                        </a>
-                    </dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item">
-                <a class="javascript:;" href="javascript:;">
-                    <i class="layui-icon" style="top: 3px;">&#xe613;</i><cite>管理员管理</cite>
-                </a>
-                <dl class="layui-nav-child">
-                    <dd class="">
-                        <a _href="/admin/admin/index">
-                            <cite>管理员列表</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./admin-role.html">
-                            <cite>角色管理</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./admin-cate.html">
-                            <cite>权限分类</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./admin-rule.html">
-                            <cite>权限管理</cite>
-                        </a>
-                    </dd>
-                </dl>
-            </li>
-         
-            <li class="layui-nav-item">
-                <a class="javascript:;" href="javascript:;">
-                    <i class="layui-icon" style="top: 3px;">&#xe614;</i><cite>系统设置</cite>
-                </a>
-                <dl class="layui-nav-child">
-                    <dd class="">
-                        <a href="javascript:;" _href="./sys-set.html">
-                            <cite>系统设置</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./sys-data.html">
-                            <cite>数字字典</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./sys-shield.html">
-                            <cite>屏蔽词</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./sys-log.html">
-                            <cite>系统日志</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./sys-link.html">
-                            <cite>友情链接</cite>
-                        </a>
-                    </dd>
-                    <dd class="">
-                        <a href="javascript:;" _href="./sys-qq.html">
-                            <cite>第三方登录</cite>
-                        </a>
-                    </dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item" style="height: 30px; text-align: center">
-            </li>
-        </ul>
+<div class="left-side sticky-left-side">
+
+    <!--logo and iconic logo start-->
+    <div class="logo">
+        <a href="index.html"><img src="/static/admin/images/logo.png" alt=""></a>
     </div>
 
+    <div class="logo-icon text-center">
+        <a href="index.html"><img src="/static/admin/images/logo_icon.png" alt=""></a>
+    </div>
+    <!--logo and iconic logo end-->
+
+    <div class="left-side-inner">
+
+        <!-- visible to small devices only -->
+        <div class="visible-xs hidden-sm hidden-md hidden-lg">
+            <div class="media logged-user">
+                <img alt="" src="/static/admin/images/photos/user-avatar.png" class="media-object">
+                <div class="media-body">
+                    <h4><a href="#">John Doe</a></h4>
+                    <span>"Hello There..."</span>
+                </div>
+            </div>
+
+            <h5 class="left-nav-title">Account Information</h5>
+            <ul class="nav nav-pills nav-stacked custom-nav">
+              <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+              <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+              <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+        </div>
+
+        <!--sidebar nav start-->
+        <ul class="nav nav-pills nav-stacked custom-nav">
+            <li class="active">
+                <a href="/admin/index">
+                    <i class="fa fa-home"></i> 
+                    <span>首页</span>
+                </a>
+            </li>
+            <li class="menu-list">
+                <a href="">
+                    <i class="fa fa-laptop"></i> 
+                    <span>管理员管理</span>
+                </a>
+                <ul class="sub-menu-list">
+                    <li><a href="/admin/admin/index"> 管理员列表 </a></li>
+                    <li><a href="blank_page.html"> 添加管理员 </a></li>
+                </ul>
+            </li>
+            <li class="menu-list">
+                <a href="">
+                    <i class="fa fa-laptop"></i> 
+                    <span>用户管理</span>
+                </a>
+                <ul class="sub-menu-list">
+                    <li><a href="blank_page.html"> 用户列表 </a></li>
+                    <li><a href="blank_page.html"> 添加用户 </a></li>
+                </ul>
+            </li>
+            <li class="menu-list">
+                <a href="">
+                    <i class="fa fa-laptop"></i> 
+                    <span>文章管理</span>
+                </a>
+                <ul class="sub-menu-list">
+                    <li><a href="blank_page.html"> 文章列表 </a></li>
+                    <li><a href="blank_page.html"> 添加文章 </a></li>
+                </ul>
+            </li>
+            <li class="menu-list">
+                <a href="">
+                    <i class="fa fa-laptop"></i> 
+                    <span>设置</span>
+                </a>
+                <ul class="sub-menu-list">
+                    <li><a href="blank_page.html"> 设置 </a></li>
+                    <li><a href="blank_page.html"> 其他 </a></li>
+                </ul>
+            </li>
+        </ul>
+        <!--sidebar nav end-->
+
+    </div>
 </div>

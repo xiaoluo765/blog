@@ -14,14 +14,9 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('common/index');
+        return view('index/index');
     }
 
-    // 后台欢迎页
-    public function welcome()
-    {
-        return view('common/welcome');
-    }
 
     /**
      * 显示创建资源表单页.

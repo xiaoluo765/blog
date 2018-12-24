@@ -1,64 +1,118 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>
-            X-admin v1.0
-        </title>
-        <meta name="renderer" content="webkit">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="format-detection" content="telephone=no">
-        <link rel="stylesheet" href="/static/admin/css/x-admin.css" media="all">
-    </head>
-    <body>
-        <div class="layui-layout layui-layout-admin">
-            {block name="main"}
-            
-            <!-- 头部导航栏 -->
-            {include file="common/header"}
-            <!-- 头部导航栏 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
 
-            <!-- 左侧菜单栏 -->
-            {include file="common/menu"}
-            <!-- 左侧菜单栏结束 -->
+  <title>AdminEx</title>
 
-            <!-- 右侧显示页 -->
-            <div class="layui-tab layui-tab-card site-demo-title x-main" lay-filter="x-tab" lay-allowclose="true">
-                <!-- <div class="x-slide_left"></div> -->
-                <ul class="layui-tab-title">
-                    <li class="layui-this">
-                        我的桌面
-                        <i class="layui-icon layui-unselect layui-tab-close">ဆ</i>
-                    </li>
-                </ul>
-                <div class="layui-tab-content site-demo site-demo-body">
-                    <div class="layui-tab-item layui-show">
-                        <!-- <iframe frameborder="0" src="./welcome.html" class="x-iframe"></iframe> -->
-                        <iframe frameborder="0" src="/admin/welcome" class="x-iframe"></iframe>
-                    </div>
-                </div>
-            </div>
-            <!-- 右侧显示页结束 -->
+  <!--icheck-->
+  <link href="/static/admin/js/iCheck/skins/minimal/minimal.css" rel="stylesheet">
+  <link href="/static/admin/js/iCheck/skins/square/square.css" rel="stylesheet">
+  <link href="/static/admin/js/iCheck/skins/square/red.css" rel="stylesheet">
+  <link href="/static/admin/js/iCheck/skins/square/blue.css" rel="stylesheet">
 
-            {/block}
+  <!--dashboard calendar-->
+  <link href="/static/admin/css/clndr.css" rel="stylesheet">
 
-            <div class="site-mobile-shade">
-            </div>
-        </div>
-        <script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
-        <script src="/static/admin/js/x-admin.js"></script>
-        <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-        </script>
-    </body>
+  <!--Morris Chart CSS -->
+  <link rel="stylesheet" href="/static/admin/js/morris-chart/morris.css">
+
+  <!--common-->
+  <link href="/static/admin/css/style.css" rel="stylesheet">
+  <link href="/static/admin/css/style-responsive.css" rel="stylesheet">
+
+
+
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="/static/admin/js/html5shiv.js"></script>
+  <script src="/static/admin/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- 左边菜单栏开始 -->
+    {include file="common/menu"}
+    <!-- 左边菜单栏结束 -->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- 头部导航栏开始 -->
+        {include file="common/header"}
+        <!-- 头部导航栏结束 -->
+
+        <!-- page heading start-->
+ 
+        <!-- page heading end-->
+
+        <!--body wrapper start-->
+        {block name="main"}
+        内容
+        {/block}
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <footer>
+            2014 &copy; AdminEx by <a href="http://www.mycodes.net/" target="_blank">源码之家</a>
+        </footer>
+        <!--footer section end-->
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="/static/admin/js/jquery-1.10.2.min.js"></script>
+<script src="/static/admin/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="/static/admin/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="/static/admin/js/bootstrap.min.js"></script>
+<script src="/static/admin/js/modernizr.min.js"></script>
+<script src="/static/admin/js/jquery.nicescroll.js"></script>
+
+<!--easy pie chart-->
+<script src="/static/admin/js/easypiechart/jquery.easypiechart.js"></script>
+<script src="/static/admin/js/easypiechart/easypiechart-init.js"></script>
+
+<!--Sparkline Chart-->
+<script src="/static/admin/js/sparkline/jquery.sparkline.js"></script>
+<script src="/static/admin/js/sparkline/sparkline-init.js"></script>
+
+<!--icheck -->
+<script src="/static/admin/js/iCheck/jquery.icheck.js"></script>
+<script src="/static/admin/js/icheck-init.js"></script>
+
+<!-- jQuery Flot Chart-->
+<script src="/static/admin/js/flot-chart/jquery.flot.js"></script>
+<script src="/static/admin/js/flot-chart/jquery.flot.tooltip.js"></script>
+<script src="/static/admin/js/flot-chart/jquery.flot.resize.js"></script>
+
+
+<!--Morris Chart-->
+<script src="/static/admin/js/morris-chart/morris.js"></script>
+<script src="/static/admin/js/morris-chart/raphael-min.js"></script>
+
+<!--Calendar-->
+<script src="/static/admin/js/calendar/clndr.js"></script>
+<script src="/static/admin/js/calendar/evnt.calendar.init.js"></script>
+<script src="/static/admin/js/calendar/moment-2.2.1.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore./static/admin/js/1.5.2/underscore-min.js"></script>
+
+<!--common scripts for all pages-->
+<script src="/static/admin/js/scripts.js"></script>
+
+<!--Dashboard Charts-->
+<script src="/static/admin/js/dashboard-chart-init.js"></script>
+
+
+</body>
 </html>
