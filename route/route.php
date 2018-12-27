@@ -32,3 +32,9 @@ Route::get('admin/admin/add', 'admin/AdminController/add');
 Route::post('admin/admin/doadd', 'admin/AdminController/doadd');
 // 后台管理员修改
 Route::get('admin/admin/edit', 'admin/AdminController/edit');
+// 后台管理员修改处理
+Route::post('admin/admin/doedit', 'admin/AdminController/doedit');
+// 后台管理员删除
+Route::get('admin/admin/del', 'admin/AdminController/del');
+
+

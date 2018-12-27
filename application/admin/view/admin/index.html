@@ -9,31 +9,40 @@
          </span>
     </header>
     <div class="panel-body">
-        <table class="table table-striped">
-            <thead>
-	            <tr>
-	                <th>ID</th>
-	                <th>用户名</th>
-	                <th>昵称</th>
-	                <th>邮箱</th>
-	                <th>手机号</th>
-	                <th>创建时间</th>
-	                <th>操作</th>
-	            </tr>
-            </thead>
-            <tbody>
-	            <tr>
-	                <td>1</td>
-	                <td>123</td>
-	                <td>haha</td>
-	                <td>1222@qq.com</td>
-	                <td>13640328039</td>
-	                <td>1125523512</td>
-	                <td><a href="#">删除</a></td>
-	            </tr>
+        <div class="adv-table">
+	        <table  class="display table table-bordered table-striped" id="dynamic-table">
+	        	<thead>
+		        	<tr>
+		        		<th><input type="checkbox" name=""></th>
+		            	<th>ID</th>
+		                <th>用户名</th>
+		                <th>昵称</th>
+		                <th>邮箱</th>
+		                <th>手机号</th>
+		                <th>创建时间</th>
+		                <th>操作</th>
+		        	</tr>
+	        	</thead>
+		        <tbody>
+		        	{volist name="data" id="value"}
+			        <tr class="gradeX">
+		        		<td><input type="checkbox" name=""></td>
+			            <td>{$value.id}</td>
+		                <td>{$value.username}</td>
+		                <td>{$value.nickname}</td>
+		                <td>{$value.email}</td>
+		                <td>{$value.phone}</td>
+		                <td>{$value.createtime}</td>
+		                <td>
+		                	<button class="btn btn-info btn-sm" type="button"><a href="/admin/admin/edit?id={$value.id}" style="color: white;text-decoration: none;">修改</a></button>
+		                	<button class="btn btn-danger btn-sm" type="button"><a href="/admin/admin/del?id={$value.id}" style="color: white;text-decoration: none;">删除</a></button>
+		                </td>
+			        </tr>
+			        {/volist}
+		        </tbody>
+	        </table>
 
-            </tbody>
-        </table>
+        </div>
     </div>
 </section>
 {/block}
