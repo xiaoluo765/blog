@@ -20,7 +20,17 @@
 // ];
 
 // 前台首页
-Route::get('/', 'index/index/index');
+Route::get('/', 'home/IndexController/index');
+// 我的相册页
+Route::get('home/album', 'home/AlbumController/index');
+// 我的日记页
+Route::get('home/diary', 'home/DiaryController/index');
+// 关于我
+Route::get('home/about', 'home/AboutController/index');
+// 留言页
+Route::get('home/message', 'home/MessageController/index');
+
+
 // 后台首页
 Route::get('admin/index', 'admin/IndexController/index');
 
@@ -36,5 +46,26 @@ Route::get('admin/admin/edit', 'admin/AdminController/edit');
 Route::post('admin/admin/doedit', 'admin/AdminController/doedit');
 // 后台管理员删除
 Route::get('admin/admin/del', 'admin/AdminController/del');
+
+// 文章列表
+Route::get('admin/article/list', 'admin/ArticleController/list');
+// 文章添加
+Route::get('admin/article/add', 'admin/ArticleController/add');
+// 文章添加处理
+Route::post('admin/article/doadd', 'admin/ArticleController/doadd');
+// 文章修改
+Route::get('admin/article/edit', 'admin/ArticleController/edit');
+// 文章修改处理
+Route::post('admin/article/doedit', 'admin/ArticleController/doedit');
+// 文章删除
+Route::get('admin/article/del', 'admin/ArticleController/del');
+
+
+
+
+
+
+
+
 
 
